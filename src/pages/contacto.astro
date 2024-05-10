@@ -1,7 +1,10 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import { ContactoForm } from "@/components/ContactoForm";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Contacto">
-    
+    <h1 class="text-center font-semibold text-5xl">Contacto</h1>
+
+    <ContactoForm client:load />
 </Layout>
