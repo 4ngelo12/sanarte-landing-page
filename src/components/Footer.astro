@@ -1,0 +1,158 @@
+---
+import FooterInfoItem from "./FooterInfoItem.astro";
+---
+
+<footer>
+    <div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d387.0523143307584!2d-77.02841950734282!3d-12.095522831005251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x9105c8660e0aabd3%3A0x143bcf0fc7cc672a!2sC.%20Chinch%C3%B3n%20855%2C%20Lima%2015046!3m2!1d-12.0955338!2d-77.028291!5e0!3m2!1ses-419!2spe!4v1715276101472!5m2!1ses-419!2spe"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="flex flex-col items-center">
+        <picture>
+            <img src="" alt="Logo" />
+        </picture>
+
+        <div
+            class="flex flex-col md:flex-row justify-between gap-12 py-5 centrar"
+        >
+            <FooterInfoItem
+                title="Ubicación"
+                data={[
+                    "Calle Chinchón 855, San Isidro, Lima, Provincia De Lima",
+                ]}
+            />
+
+            <FooterInfoItem title="Contacto">
+                <div class="flex gap-2">
+                    <svg
+                        fill="#fff"
+                        class="w-6 h-6"
+                        viewBox="0 0 256 256"
+                        id="Flat"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <g opacity="0.2">
+                            <path
+                                d="M128.00049,32A96.02264,96.02264,0,0,0,45.4292,176.99807l.00049-.00061-9.47315,33.15661a8,8,0,0,0,9.89014,9.8899l33.15625-9.47327v.001A96.00624,96.00624,0,1,0,128.00049,32ZM152.11377,183.9999A80.0001,80.0001,0,0,1,72,103.88625,27.97634,27.97634,0,0,1,100,76h0a6.89208,6.89208,0,0,1,5.98438,3.4729l11.6914,20.45923a8.00129,8.00129,0,0,1-.08594,8.08521l-9.38916,15.64843h0a48.18271,48.18271,0,0,0,24.1333,24.13379l.00049-.00012,15.64795-9.389a8.00033,8.00033,0,0,1,8.08545-.08594l20.459,11.69092A6.89223,6.89223,0,0,1,180,156,28.081,28.081,0,0,1,152.11377,183.9999Z"
+                            ></path>
+                        </g>
+                        <path
+                            d="M128.00049,24a104.0281,104.0281,0,0,0-91.189,154.041l-8.54687,29.915A15.99944,15.99944,0,0,0,48.044,227.73635l29.916-8.54688A104.00728,104.00728,0,1,0,128.00049,24Zm0,192a87.86347,87.86347,0,0,1-44.90772-12.30566,8.00324,8.00324,0,0,0-6.28759-.81641l-33.15674,9.47363,9.47265-33.15625a7.99679,7.99679,0,0,0-.8164-6.28613A88.01132,88.01132,0,1,1,128.00049,216Zm52.4956-72.93066L160.03662,131.378a16.01881,16.01881,0,0,0-16.17041.17285l-11.85107,7.11133a40.03607,40.03607,0,0,1-14.67627-14.67676l7.11084-11.85156a16.01674,16.01674,0,0,0,.17187-16.16992L112.93066,75.503A14.92643,14.92643,0,0,0,100,68a36.01385,36.01385,0,0,0-36,35.876A87.99949,87.99949,0,0,0,151.999,192c.042,0,.09473.02344.126,0A36.01427,36.01427,0,0,0,188,156,14.9238,14.9238,0,0,0,180.49609,143.06936ZM152.10254,176H152a72.00036,72.00036,0,0,1-72-72.10254A19.99027,19.99027,0,0,1,99.36328,84.00979l11.36621,19.8916-9.38867,15.64844a7.99972,7.99972,0,0,0-.43652,7.39746,56.03179,56.03179,0,0,0,28.14892,28.14843,7.99583,7.99583,0,0,0,7.397-.43652l15.64843-9.38867,19.8916,11.36621A19.99027,19.99027,0,0,1,152.10254,176Z"
+                        ></path>
+                    </svg>
+
+                    <a href="#">955 329 677</a>
+                </div>
+
+                <div class="flex gap-2">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                        ></path>
+                    </svg>
+
+                    <a href="mailto:recepcion@sanarte.com.pe"
+                        >recepcion@sanarte.com.pe</a
+                    >
+                </div>
+            </FooterInfoItem>
+
+            <FooterInfoItem
+                title="Horarios de Atención"
+                data={[
+                    "Lun a Vie: 08:00 am - 8:00 pm",
+                    "Sab: 08:00 am - 1:00 pm",
+                ]}
+            />
+
+            <FooterInfoItem title="Siguenos en">
+                <div class="flex items-center gap-3">
+                    <a href="https://es-la.facebook.com/sanarte.terapiaholistica/">
+                        <svg
+                            class="w-8 h-8"
+                            viewBox="0 0 24 24"
+                            ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                                id="SVGRepo_tracerCarrier"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></g><g
+                                id="SVGRepo_iconCarrier"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"
+                                    fill="#fff"
+                                    style="--darkreader-inline-fill: #181a1b;"
+                                    data-darkreader-inline-fill=""></path>
+                            </g></svg
+                        >
+                    </a>
+
+                    <a href="https://www.instagram.com/sanartelima/">
+                        <svg
+                            class="w-10 h-10"
+                            viewBox="0 0 192 192"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            stroke="#ffffff"
+                            data-darkreader-inline-stroke=""
+                            style="--darkreader-inline-stroke: #e8e6e3;"
+                            ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                                id="SVGRepo_tracerCarrier"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></g><g
+                                id="SVGRepo_iconCarrier"
+                                ><path
+                                    stroke="#ffffff"
+                                    stroke-width="12"
+                                    d="M96 162c-14.152 0-24.336-.007-32.276-.777-7.849-.761-12.87-2.223-16.877-4.741a36 36 0 0 1-11.33-11.329c-2.517-4.007-3.98-9.028-4.74-16.877C30.007 120.336 30 110.152 30 96c0-14.152.007-24.336.777-32.276.76-7.849 2.223-12.87 4.74-16.877a36 36 0 0 1 11.33-11.33c4.007-2.517 9.028-3.98 16.877-4.74C71.663 30.007 81.847 30 96 30c14.152 0 24.336.007 32.276.777 7.849.76 12.87 2.223 16.877 4.74a36 36 0 0 1 11.329 11.33c2.518 4.007 3.98 9.028 4.741 16.877.77 7.94.777 18.124.777 32.276 0 14.152-.007 24.336-.777 32.276-.761 7.849-2.223 12.87-4.741 16.877a36 36 0 0 1-11.329 11.329c-4.007 2.518-9.028 3.98-16.877 4.741-7.94.77-18.124.777-32.276.777Z"
+                                    data-darkreader-inline-stroke=""
+                                    style="--darkreader-inline-stroke: #e8e6e3;"
+                                ></path><circle
+                                    cx="96"
+                                    cy="96"
+                                    r="30"
+                                    stroke="#ffffff"
+                                    stroke-width="12"
+                                    data-darkreader-inline-stroke=""
+                                    style="--darkreader-inline-stroke: #e8e6e3;"
+                                ></circle><circle
+                                    cx="135"
+                                    cy="57"
+                                    r="9"
+                                    fill="#ffffff"
+                                    data-darkreader-inline-fill=""
+                                    style="--darkreader-inline-fill: #e8e6e3;"
+                                ></circle></g
+                            ></svg
+                        >
+                    </a>
+                </div>
+            </FooterInfoItem>
+        </div>
+
+        <div class="py-4">
+            <p>Copyright © 2024 | Sanarte</p>
+        </div>
+    </div>
+</footer>
+
+<style lang="scss">
+    iframe {
+        height: 12.188rem;
+        width: 100%;
+    }
+</style>

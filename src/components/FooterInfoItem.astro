@@ -1,0 +1,15 @@
+---
+interface Props {
+    title: string;
+    data?: string[];
+}
+
+const { title, data } = Astro.props;
+---
+
+<div class="flex flex-col items-center text-center">
+    <h3 class="font-bold text-xl">{title}</h3>
+    {data && data.map((item) => <p>{item}</p>)}
+
+    <slot />
+</div>
