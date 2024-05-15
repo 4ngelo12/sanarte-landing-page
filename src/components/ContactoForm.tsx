@@ -33,9 +33,9 @@ export function ContactoForm() {
                                 },
                             })}
                             className="block w-full rounded-md border-0 px-3.5 py-2 
-                            text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 
+                            text-gray-900 shadow-sm ring-1 ring-inset outline-none ring-gray-300
                             placeholder:text-gray-500 focus:ring-2 focus:ring-inset 
-                            focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            focus:ring-amber-700 sm:text-sm sm:leading-6"
                         />
 
                         {
@@ -67,7 +67,7 @@ export function ContactoForm() {
                             placeholder='correo@mail.com'
                             autoComplete="email"
                             className="block w-full rounded-md border-0 px-3.5 py-2 
-                            text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 
+                            text-gray-900 shadow-sm ring-1 ring-inset outline-none ring-gray-300
                             placeholder:text-gray-500 focus:ring-2 focus:ring-inset 
                             focus:ring-amber-700 sm:text-sm sm:leading-6"
                         />
@@ -96,9 +96,9 @@ export function ContactoForm() {
                             id="telefono"
                             placeholder='(01) 456-7890'
                             className="block w-full rounded-md border-0 px-3.5 py-2 
-                            text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 
+                            text-gray-900 shadow-sm ring-1 ring-inset outline-none ring-gray-300
                             placeholder:text-gray-500 focus:ring-2 focus:ring-inset 
-                            focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            focus:ring-amber-700 sm:text-sm sm:leading-6"
                         />
 
                         {
@@ -127,9 +127,9 @@ export function ContactoForm() {
                             id="mensaje"
                             rows={8}
                             className="block w-full rounded-md border-0 px-3.5 py-2 
-                            text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300
-                            placeholder:text-gray-500 focus:ring-2 focus:ring-inset
-                             focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            text-gray-900 shadow-sm ring-1 ring-inset outline-none ring-gray-300
+                            placeholder:text-gray-500 focus:ring-2 focus:ring-inset 
+                            focus:ring-amber-700 sm:text-sm sm:leading-6"
                             defaultValue={''}
                         />
 
@@ -154,5 +154,3 @@ export function ContactoForm() {
         </form>
     );
 }
-
-
