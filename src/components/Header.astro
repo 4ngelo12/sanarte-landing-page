@@ -7,9 +7,18 @@
 
     <nav>
         <ul class="flex flex-col md:flex-row gap-5">
-            <li><a href="/">Inicio</a></li>
+            <li><a href="/" class="">Inicio</a></li>
             <li><a href="/nosotros">Nosotros</a></li>
             <li><a href="/contacto">Contacto</a></li>
         </ul>
     </nav>
 </header>
+
+<style lang="scss">
+    a {
+        color: #4e341e;
+        &:hover {
+            text-decoration: underline 2px solid #b37c1d;
+        }
+    }
+</style>
