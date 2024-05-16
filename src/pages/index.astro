@@ -1,11 +1,106 @@
 ---
+import CatalogoSerivicios from "@/components/CatalogoSerivicios.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Inicio">
-    <picture>
-        <img class="lg:w-[80rem] lg:h-[38rem]" src="img/img.png" alt="Servicio" loading="lazy" />
-    </picture>
+    <div class="contenedor">
+        <img
+            src="img/masajes.jpg"
+            alt="Descripción de la empresa"
+            loading="lazy"
+        />
+
+        <div class="superposicion"></div>
+
+        <div class="texto">
+            <h3 class="font-bold text-2xl">Descubre Nuestros Servicios</h3>
+            <p class="text-[1rem]">
+                En SANARTE contamos con una amplia variedad de servicios que
+                tienen los mas altos estándares de calidad para el bienestar y
+                seguridad de nuestros clientes.
+            </p>
+        </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row py-6 gap-6 mx-10">
+        <img src="img/sanarte-info.jpg" alt="información de la empresa" />
+
+        <div class="flex flex-col gap-4">
+            <h2 class="text-3xl font-bold text-center mt-8">
+                Sanarte Wellness Center
+            </h2>
+            <p class="text-center mt-4">
+                Somos un oasis de bienestar y belleza que se dedica a nutrir el
+                cuerpo, calmar la mente y elevar el espíritu de todos aquellos
+                que nos visitan. Estamos aquí para ayudar a nuestros clientes a
+                sentirse saludables y mejorar su bienestar, tanto en su interior
+                como en su exterior
+            </p>
+
+            <button>
+                <a
+                    href="/nosotros"
+                    class="text-white font-bold py-2 px-4 rounded mt-4"
+                >
+                    Conocer más...
+                </a>
+            </button>
+        </div>
+    </div>
+
+    <div class="py-6">
+        <CatalogoSerivicios />
+    </div>
 </Layout>
 
-<style lang="scss"></style>
+<style lang="scss">
+    .contenedor {
+        position: relative; /* Necesario para que el posicionamiento absoluto funcione */
+        display: inline-block; /* Para que el contenedor se ajuste al contenido */
+
+        @media (min-width: 768px) {
+            img {
+                height: 36.4rem;
+                width: 89rem;
+            }
+        }
+    }
+
+    .superposicion {
+        @media (min-width: 768px) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* Ajusta la superposición al ancho completo de la imagen */
+            height: 100%; /* Ajusta la superposición a la altura completa de la imagen */
+            background-color: rgba(
+                0,
+                0,
+                0,
+                0.65
+            ); /* Color oscuro semitransparente */
+        }
+    }
+
+    .texto {
+        padding-top: 1.5rem;
+        @media (min-width: 768px) {
+            padding-top: 0;
+            display: inline-block;
+            position: absolute;
+            color: white;
+            top: 70%;
+            left: 75%;
+            transform: translate(-20%, -50%);
+        }
+    }
+
+    a {
+        background-color: var(--button-bg);
+
+        &:hover {
+            background-color: var(--button-bg-hover);
+        }
+    }
+</style>
