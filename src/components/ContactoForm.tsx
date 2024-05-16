@@ -1,5 +1,4 @@
 
-import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 export function ContactoForm() {
@@ -8,21 +7,22 @@ export function ContactoForm() {
     } } = useForm()
 
     const onSubmit = handleSubmit((data) => {
-        console.log(data)
+        const URL = `https://api.whatsapp.com/send?phone=51955329677&text=Hola mi nombre es, ${data.nombres}%0Acon%20el%20correo:%20${data.email},%0Anumero%20de%20telefono:%20${data.telefono}%0AQuisiera%20saber%20acerca%20de%0A${data.mensaje}&source=&data=`;
+        window.open(URL, "_blank");
     })
 
     return (
         <form onSubmit={onSubmit} className="mx-auto max-w-xl mt-10">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div className="sm:col-span-2">
-                    <label htmlFor="apellido" className="block text-sm font-semibold leading-6 text-gray-900">
-                        Apellido:
+                    <label htmlFor="nombres" className="block text-sm font-semibold leading-6 text-gray-900">
+                        Apellido y Nombre:
                     </label>
                     <div className="mt-2">
                         <input
                             type="text"
-                            id="apellido"
-                            {...register('apellido', {
+                            id="nombres"
+                            {...register('nombres', {
                                 required: {
                                     value: true,
                                     message: 'Este campo es requerido',
@@ -34,7 +34,7 @@ export function ContactoForm() {
                             })}
                             className="block w-full rounded-md border-0 px-3.5 py-2 
                             text-gray-900 shadow-sm ring-1 ring-inset outline-none ring-gray-300
-                            placeholder:text-gray-500 focus:ring-2 focus:ring-inset 
+                            focus:ring-2 focus:ring-inset 
                             focus:ring-amber-700 sm:text-sm sm:leading-6"
                         />
 
@@ -64,12 +64,10 @@ export function ContactoForm() {
                                 }
                             })}
                             id="email"
-                            placeholder='correo@mail.com'
                             autoComplete="email"
-                            className="block w-full rounded-md border-0 px-3.5 py-2 
-                            text-gray-900 shadow-sm ring-1 ring-inset outline-none ring-gray-300
-                            placeholder:text-gray-500 focus:ring-2 focus:ring-inset 
-                            focus:ring-amber-700 sm:text-sm sm:leading-6"
+                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 
+                            shadow-sm ring-1 ring-inset outline-none ring-gray-300 focus:ring-2 
+                            focus:ring-inset focus:ring-amber-700 sm:text-sm sm:leading-6"
                         />
 
                         {
@@ -94,10 +92,9 @@ export function ContactoForm() {
                                 }
                             })}
                             id="telefono"
-                            placeholder='(01) 456-7890'
                             className="block w-full rounded-md border-0 px-3.5 py-2 
                             text-gray-900 shadow-sm ring-1 ring-inset outline-none ring-gray-300
-                            placeholder:text-gray-500 focus:ring-2 focus:ring-inset 
+                             focus:ring-2 focus:ring-inset 
                             focus:ring-amber-700 sm:text-sm sm:leading-6"
                         />
 
@@ -117,18 +114,18 @@ export function ContactoForm() {
                             {...register('mensaje', {
                                 required: {
                                     value: true,
-                                    message: 'El campo mensaje es requerido',
+                                    message: 'El mensaje es requerido',
                                 },
                                 minLength: {
                                     value: 10,
-                                    message: 'El mensaje debe tener al menos 10 caracteres'
+                                    message: 'El campo debe tener al menos 10 caracteres'
                                 }
                             })}
                             id="mensaje"
                             rows={8}
                             className="block w-full rounded-md border-0 px-3.5 py-2 
                             text-gray-900 shadow-sm ring-1 ring-inset outline-none ring-gray-300
-                            placeholder:text-gray-500 focus:ring-2 focus:ring-inset 
+                             focus:ring-2 focus:ring-inset 
                             focus:ring-amber-700 sm:text-sm sm:leading-6"
                             defaultValue={''}
                         />
