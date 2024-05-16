@@ -4,17 +4,12 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Nosotros">
-    <div class="flex flex-col-reverse md:flex-row-reverse gap-8">
-        <picture class="w-full bg-cover">
-            <img
-                class="aspect-video w-full"
-                src="img/img.png"
-                alt="Imagen empresa"
-                loading="lazy"
-            />
+    <div class="flex flex-col-reverse md:flex-row-reverse gap-8 pb-1">
+        <picture class="md:w-[175rem]">
+            <img src="img/img.png" alt="Imagen empresa" loading="lazy" />
         </picture>
 
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col justify-center gap-3">
             <h1 class="text-2xl font-bold">Nuestra historia</h1>
 
             <p>
@@ -31,7 +26,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 py-5">
+    <div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-8 py-8">
         <NosotrosInfoItem
             title="Visión"
             description=`Ser la empresa líder en el mercado de la belleza y el bienestar
@@ -48,11 +43,11 @@ import Layout from "../layouts/Layout.astro";
         integral del cuerpo y la mente, ofreciendo una gama completa de servicios 
         que van desde tratamientos faciales y corporales de vanguardia hasta terapias 
         holísticas personalizadas que abordan las necesidades individuales de cada cliente.`
-            className="text-center"
+            className="text-center md:col-start-2 md:row-start-2"
         />
     </div>
 
-    <div class="flex flex-col gap-4">
+    <!-- <div class="flex flex-col gap-4">
         <h2 class="text-2xl font-bold">Nuestro equipo</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -80,5 +75,5 @@ import Layout from "../layouts/Layout.astro";
                 image="img.png"
             />
         </div>
-    </div>
+    </div> -->
 </Layout>
