@@ -15,14 +15,14 @@ export function ContactoForm() {
         <form onSubmit={onSubmit} className="mx-auto max-w-xl mt-10">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div className="sm:col-span-2">
-                    <label htmlFor="nombre" className="block text-sm font-semibold leading-6 text-gray-900">
-                        Nombre:
+                    <label htmlFor="apellido" className="block text-sm font-semibold leading-6 text-gray-900">
+                        Apellido:
                     </label>
                     <div className="mt-2">
                         <input
                             type="text"
-                            id="nombre"
-                            {...register('nombre', {
+                            id="apellido"
+                            {...register('apellido', {
                                 required: {
                                     value: true,
                                     message: 'Este campo es requerido',
@@ -39,8 +39,8 @@ export function ContactoForm() {
                         />
 
                         {
-                            errors.nombre && (
-                                <span className="text-red-500 text-sm mt-1">{String(errors.nombre.message)}</span>
+                            errors.apellido && (
+                                <span className="text-red-500 text-sm mt-1">{String(errors.apellido.message)}</span>
                             )
                         }
                     </div>
@@ -110,7 +110,7 @@ export function ContactoForm() {
                 </div>
                 <div className="sm:col-span-2">
                     <label htmlFor="mensaje" className="block text-sm font-semibold leading-6 text-gray-900">
-                        Mensaje
+                        Cuentanos, ¿Cómo podriamos ayudarte?:
                     </label>
                     <div className="mt-2">
                         <textarea

@@ -12,17 +12,17 @@ import FooterInfoItem from "./FooterInfoItem.astro";
     </div>
 
     <div class="flex flex-col items-center">
-        <picture>
-            <img src="" alt="Logo" />
+        <picture class="flex items-center justify-center">
+            <img class="w-96" src="img/logo-footer.png" alt="Logo" />
         </picture>
 
         <div
-            class="flex flex-col md:flex-row justify-between gap-12 py-5 centrar"
+            class="flex flex-col md:flex-row justify-between gap-8 py-5 centrar"
         >
             <FooterInfoItem
                 title="Ubicación"
                 data={[
-                    "Calle Chinchón 855, San Isidro, Lima, Provincia De Lima",
+                    "Calle Chinchón 855, San", " Isidro, Lima, Provincia De Lima"
                 ]}
             />
 
@@ -79,9 +79,10 @@ import FooterInfoItem from "./FooterInfoItem.astro";
             />
 
             <FooterInfoItem title="Siguenos en">
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-3 px-4">
                     <a
-                        href="https://es-la.facebook.com/sanarte.terapiaholistica/" target="_blank"
+                        href="https://es-la.facebook.com/sanarte.terapiaholistica/"
+                        target="_blank"
                     >
                         <svg class="w-8 h-8" viewBox="0 0 24 24"
                             ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
@@ -101,7 +102,10 @@ import FooterInfoItem from "./FooterInfoItem.astro";
                         >
                     </a>
 
-                    <a href="https://www.instagram.com/sanartelima/" target="_blank">
+                    <a
+                        href="https://www.instagram.com/sanartelima/"
+                        target="_blank"
+                    >
                         <svg
                             class="w-10 h-10"
                             viewBox="0 0 192 192"
