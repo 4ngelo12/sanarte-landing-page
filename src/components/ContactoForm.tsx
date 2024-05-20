@@ -7,7 +7,14 @@ export function ContactoForm() {
     } } = useForm()
 
     const onSubmit = handleSubmit((data) => {
-        const URL = `https://api.whatsapp.com/send?phone=51955329677&text=Hola mi nombre es, ${data.nombres}%0Acon%20el%20correo:%20${data.email},%0Anumero%20de%20telefono:%20${data.telefono}%0AQuisiera%20saber%20acerca%20de%0A${data.mensaje}&source=&data=`;
+        let URL: string;
+
+        if (!data.email) {
+            URL = `https://api.whatsapp.com/send?phone=51955329677&text=Hola mi nombre es, ${data.nombres}%0Anumero%20de%20telefono:%20${data.telefono}%0AQuisiera%20saber%20acerca%20de%0A${data.mensaje}&source=&data=`;
+        } else {
+            URL = `https://api.whatsapp.com/send?phone=51955329677&text=Hola mi nombre es, ${data.nombres}%0Acon%20el%20correo:%20${data.email},%0Anumero%20de%20telefono:%20${data.telefono}%0AQuisiera%20saber%20acerca%20de%0A${data.mensaje}&source=&data=`;
+        }
+        
         window.open(URL, "_blank");
     })
 
@@ -16,7 +23,7 @@ export function ContactoForm() {
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div className="sm:col-span-2">
                     <label htmlFor="nombres" className="block text-sm font-semibold leading-6 text-gray-900">
-                        Apellido y Nombre:
+                        Apellidos y Nombres:
                     </label>
                     <div className="mt-2">
                         <input
@@ -54,10 +61,6 @@ export function ContactoForm() {
                         <input
                             type="email"
                             {...register('email', {
-                                required: {
-                                    value: true,
-                                    message: 'El campo email es requerido',
-                                },
                                 pattern: {
                                     value: /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/,
                                     message: 'El texto no parece un correo válido',

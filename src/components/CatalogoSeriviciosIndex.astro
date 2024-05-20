@@ -1,0 +1,91 @@
+---
+import ServicioCard from "./ServicioCardIndex.astro";
+import { data } from "@/lib/data";
+---
+
+<h3 class="text-2xl font-bold mb-6">Catalogo de servicios</h3>
+
+<div class="flex flex-wrap gap-5 items-center justify-center">
+    {
+        data.map((item) => (
+            <ServicioCard
+                id={item.id}
+                title={item.nombre}
+                image={item.image}
+                btnText="Ver tratamientos"
+                services={[]}
+            />
+        ))
+    }
+    <!-- <ServicioCard
+        id={1}
+        title="Masajes"
+        image="masajes"
+        btnText="Ver tratamientos"
+        services={[
+            "Masaje Descontracturante",
+            "Masaje relajante",
+            "Masaje con pindas o ayurveda",
+            "Masaje con piedras calientes",
+            "Masaje con Bambú",
+            "Masaje de medio cuerpo",
+        ]}
+    />
+
+    <ServicioCard
+        id={1}
+        title="Tratamientos Faciales"
+        image="tratamiento-facial"
+        btnText="Ver tratamientos"
+        services={[
+            "Limpieza facial profunda",
+            "Facial antiage",
+            "Microneedling",
+            "Peeling ultrasónico",
+            "Hydrafacial",
+            "Facial orgánico",
+            "Facial hydracure",
+            "Hilos tensores",
+        ]}
+    />
+
+    <ServicioCard
+        id={1}
+        title="Yoga"
+        image="yoga"
+        btnText="Ver tratamientos"
+        services={["Yoga Vinyasa", "Hatha yoga", "Yoga Terapeútico"]}
+    />
+
+    <ServicioCard
+        id={1}
+        title="Tratamientos corporales"
+        image="tratamieto-corporal"
+        btnText="Ver tratamientos"
+        services={["Tratamiento reafirmante", "Criolipólisis 360", "Lipobody"]}
+    />
+
+    <ServicioCard
+        id={1}
+        title="Terapias holisticas"
+        image="tratmiento-holistico"
+        btnText="Ver tratamientos"
+        services={[""]}
+    />
+
+    <ServicioCard
+        id={1}
+        title="Rituales"
+        image="tratmiento-holistico"
+        btnText="Ver tratamientos"
+        services={["Ritual Kotodama", ""]}
+    />
+
+    <ServicioCard
+        id={1}
+        title="Depilación láser"
+        image="tratmiento-holistico"
+        btnText="Ver tratamientos"
+        services={[""]}
+    /> -->
+</div>
