@@ -10,9 +10,9 @@ export function ContactoForm() {
         let URL: string;
 
         if (!data.email) {
-            URL = `https://api.whatsapp.com/send?phone=51955329677&text=Hola mi nombre es, ${data.nombres}%0Anumero%20de%20telefono:%20${data.telefono}%0AQuisiera%20saber%20acerca%20de%0A${data.mensaje}&source=&data=`;
+            URL = `https://api.whatsapp.com/send?phone=51955329677&text=Hola%20mi%20nombre%20es,%20${data.nombres}%0Anumero%20de%20telefono:%20${data.telefono}%0AQuisiera%20saber%20acerca%20de%0A${data.mensaje}`;
         } else {
-            URL = `https://api.whatsapp.com/send?phone=51955329677&text=Hola mi nombre es, ${data.nombres}%0Acon%20el%20correo:%20${data.email},%0Anumero%20de%20telefono:%20${data.telefono}%0AQuisiera%20saber%20acerca%20de%0A${data.mensaje}&source=&data=`;
+            URL = `https://api.whatsapp.com/send?phone=51955329677&text=Hola%20mi%20nombre%20es,%20${data.nombres}%0Acon%20el%20correo:%20${data.email},%0Anumero%20de%20telefono:%20${data.telefono}%0AQuisiera%20saber%20acerca%20de%0A${data.mensaje}`;
         }
         
         window.open(URL, "_blank");

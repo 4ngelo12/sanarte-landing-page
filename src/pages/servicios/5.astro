@@ -1,0 +1,80 @@
+---
+import ServicioCardIndex from "@/components/ServicioCardIndex.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Terapias holisticas">
+    <h2 class="text-center text-3xl font-semibold">Terapias holisticas</h2>
+
+    <div class="flex flex-wrap gap-5 items-center justify-center mb-4">
+        <ServicioCardIndex
+            id={1}
+            title="Alineamiento"
+            image="masajes"
+            url="/"
+            btnText="Más Información"
+            services={[
+            ]}
+        />
+
+        <ServicioCardIndex
+            id={2}
+            title="Limpieza energética"
+            image="masajes"
+            btnText="Más Información"
+            url="/"
+            services={[
+                "Masaje con pindas o ayurveda",
+                "Masaje con piedras calientes",
+                "Masaje con Bambú",
+                "Masaje de medio cuerpo",
+            ]}
+        />
+
+        <ServicioCardIndex
+            id={3}
+            title="Biomagnetismo"
+            image="masajes"
+            url="/"
+            btnText="Más Información"
+            services={[
+                "Masaje con piedras calientes",
+                "Masaje con Bambú",
+                "Masaje de medio cuerpo",
+            ]}
+        />
+
+        <ServicioCardIndex
+            id={4}
+            title="Péndulo hebreo"
+            image="masajes"
+            url="/"
+            btnText="Más Información"
+            services={[
+                "Masaje con Bambú",
+                "Masaje de medio cuerpo",
+            ]}
+        />
+
+        <ServicioCardIndex
+            id={5}
+            title="Terapia floral"
+            image="masajes"
+            url="/"
+            btnText="Más Información"
+            services={[
+                "Masaje de medio cuerpo",
+            ]}
+        />
+
+        <ServicioCardIndex
+            id={6}
+            title="Reiki"
+            image="masajes"
+            url="/"
+            btnText="Más Información"
+            services={[
+            ]}
+        />
+    </div>
+</Layout>

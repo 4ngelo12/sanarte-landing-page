@@ -1,0 +1,49 @@
+---
+import ServicioCardIndex from "@/components/ServicioCardIndex.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Tratamientos corporales">
+    <h2 class="text-center text-3xl font-semibold mb-4">Tratamientos corporales</h2>
+
+    <div class="flex flex-wrap gap-5 items-center justify-center">
+        <ServicioCardIndex
+            id={1}
+            title="Tratamiento reafirmante"
+            image="masajes"
+            url="/"
+            btnText="Ver tratamientos"
+            services={[
+            ]}
+        />
+
+        <ServicioCardIndex
+            id={2}
+            title="Criolipólisis 360"
+            image="masajes"
+            url="/"
+            btnText="Ver tratamientos"
+            services={[
+            ]}
+        />
+
+        <ServicioCardIndex
+            id={3}
+            title="Lipobody"
+            image="masajes"
+            url="/"
+            btnText="Ver tratamientos"
+            services={[
+            ]}
+        />
+
+        <ServicioCardIndex
+        id={4}
+        title="Depilación láser"
+        image="tratmiento-holistico"
+        url="/"
+        btnText="Ver tratamientos"
+        services={[""]}
+    />
+    </div>
+</Layout>

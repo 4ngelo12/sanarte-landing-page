@@ -1,0 +1,86 @@
+---
+import ServicioCardIndex from "@/components/ServicioCardIndex.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Masajes">
+    <h2 class="text-center text-3xl font-semibold mb-5">Masajes</h2>
+
+    <div class="flex flex-wrap gap-5 items-center justify-center">
+        <ServicioCardIndex
+            id={1}
+            title="Masaje Descontracturante"
+            image="masajes"
+            url="/masajes"
+            btnText="Más Información"
+            services={[
+                
+                "Masaje relajante",
+                "Masaje con pindas o ayurveda",
+                "Masaje con piedras calientes",
+                "Masaje con Bambú",
+                "Masaje de medio cuerpo",
+            ]}
+        />
+
+        <ServicioCardIndex
+            id={2}
+            title="Masaje relajante"
+            image="masajes"
+            url="/masajes"
+            btnText="Más Información"
+            services={[
+                "Masaje con pindas o ayurveda",
+                "Masaje con piedras calientes",
+                "Masaje con Bambú",
+                "Masaje de medio cuerpo",
+            ]}
+        />
+
+        <ServicioCardIndex
+            id={5}
+            title="Masaje con pindas o ayurveda"
+            image="masajes"
+            url="/masajes"
+            btnText="Más Información"
+            services={[
+                "Masaje con piedras calientes",
+                "Masaje con Bambú",
+                "Masaje de medio cuerpo",
+            ]}
+        />
+
+        <ServicioCardIndex
+            id={4}
+            title="Masaje con piedras calientes"
+            image="masajes"
+            url="/masajes"
+            btnText="Más Información"
+            services={[
+                "Masaje con Bambú",
+                "Masaje de medio cuerpo",
+            ]}
+        />
+
+        <ServicioCardIndex
+            id={5}
+            title="Masaje con Bambú"
+            image="masajes"
+            url="/masajes"
+            btnText="Más Información"
+            services={[
+                "Masaje de medio cuerpo",
+            ]}
+        />
+
+        <ServicioCardIndex
+            id={6}
+            title="Masaje de medio cuerpo"
+            image="masajes"
+            url="/masajes"
+            btnText="Más Información"
+            services={[
+            ]}
+        />
+    </div>
+</Layout>

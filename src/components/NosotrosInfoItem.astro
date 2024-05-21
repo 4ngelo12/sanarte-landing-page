@@ -13,12 +13,16 @@ const { title, description, className, image } = Astro.props;
     {
         // Imagen Opcional
         image && (
-            <img
-                src={`img/${image}`}
-                alt={title}
-                class="w-32 h-32 rounded-full"
-                loading="lazy"
-            />
+            <picture>
+                <source srcset={`img/${image}.webp`} type="image/webp" />
+                <source srcset={`img/${image}.png`} type="image/png" />
+                <img
+                    src={`img/${image}.png`}
+                    alt={title}
+                    class="w-32 h-32 rounded-full"
+                    loading="lazy"
+                />
+            </picture>
         )
     }
 
