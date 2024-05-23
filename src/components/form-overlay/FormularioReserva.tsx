@@ -7,7 +7,12 @@ export const FormularioReserva = ({ title, isOpen, onClose }: { title: string, i
         errors
     } } = useForm();
 
-    const onSubmit = handleSubmit((data) => { });
+    const onSubmit = handleSubmit((data) => {
+        const URL = `https://api.whatsapp.com/send?phone=51993412022&text=Hola%20mi%20nombre%20es,%20${data.name}%20${data.lastname}%0Anumero%20de%20telefono:%20${data.phone}%0AQuisiera%20realizar%20una%20reserva%20de%20${title}`;
+
+        window.open(URL, "_blank");
+        onClose();
+    });
 
     return (
         <Fragment>

@@ -13,7 +13,7 @@ interface ServicioInformacionProps {
 }
 
 
-export const ServicioInformacion = ({ title, image, description, price, duration, include, cardMinHeight = "23rem",
+export const ServicioInformacion = ({ title, image, description, price, duration, include, cardMinHeight = "min-h-[23rem]",
     btnText }: ServicioInformacionProps) => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -35,8 +35,7 @@ export const ServicioInformacion = ({ title, image, description, price, duration
             </picture>
 
             <section
-                className={`servicio-contenedor text-center flex flex-col items-center justify-center rounded-b-md 
-                min-h-[${cardMinHeight}]`}
+                className={`servicio-contenedor text-center flex flex-col items-center justify-center rounded-b-md ${cardMinHeight}`}
             >
                 <div className="my-auto px-5">
                     <h4 className="font-bold text-xl mb-3">{title}</h4>
@@ -55,8 +54,8 @@ export const ServicioInformacion = ({ title, image, description, price, duration
                         <h4 className="ms-3 text-start font-semibold">Incluye:</h4>
                         <ul className="ms-7 text-start list-disc text-[.965rem]">
                             {
-                                include.map((item) => (
-                                    <li>{item}</li>
+                                include.map((index, item) => (
+                                    <li key={index}>{item}</li>
                                 ))
                             }
                         </ul>
