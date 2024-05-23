@@ -1,80 +1,135 @@
 ---
-import ServicioCardIndex from "@/components/ServicioCardIndex.astro";
+import { ServicioInformacion } from "@/components/ServicioInformacion";
+import ServiciosTitulo from "@/components/ServiciosTitulo.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
-<Layout title="Terapias holisticas">
-    <h2 class="text-center text-3xl font-semibold mb-5">Terapias holisticas</h2>
+<Layout title="Terapias Holísticas">
+    <ServiciosTitulo
+        title="Terapias Holísticas"
+        image="masajes"
+        description="En Sanarte tenemos terapias holísticas, que son un método alternativo a las terapias que conocemos, ya que aborda la gestión de las emociones y las alteraciones psicológicas de un modo distinto al tradicional"
+    />
+    <main class="centrar py-8">
+        <div class="flex flex-wrap gap-5 items-center justify-center mb-4">
+            <ServicioInformacion
+                client:visible
+                title="Terapia Floral"
+                description="La terapia floral equilibra emociones, aliviando temores, reduciendo la incertidumbre y el desinterés, minimizando la soledad y la susceptibilidad. Libera de la desesperación, el abatimiento y el sufrimiento por otros. Las esencias naturales de Bach tratan diversas emociones, restaurando el equilibrio emocional para resolver enfermedades físicas de origen emocional"
+                image="masajes"
+                price="80"
+                duration="30 min"
+                btnText="Reservar"
+            />
 
-    <div class="flex flex-wrap gap-5 items-center justify-center mb-4">
-        <ServicioCardIndex
-            id={1}
-            title="Alineamiento"
-            image="masajes"
-            url="/"
-            btnText="Más Información"
-            services={[
-            ]}
-        />
+            <ServicioInformacion
+                client:visible
+                title="Aromaterapia"
+                description="Los aceites esenciales de plantas actúan sobre el organismo, llegando al sistema nervioso. La aromaterapia combate problemas de salud y reduce síntomas como ansiedad, depresión, estrés y dificultades para dormir. Los olores activan hormonas que mejoran el estado emocional"
+                image="masajes"
+                price="100"
+                duration="60 min"
+                btnText="Reservar"
+            />
 
-        <ServicioCardIndex
-            id={2}
-            title="Limpieza energética"
-            image="masajes"
-            btnText="Más Información"
-            url="/"
-            services={[
-                "Masaje con pindas o ayurveda",
-                "Masaje con piedras calientes",
-                "Masaje con Bambú",
-                "Masaje de medio cuerpo",
-            ]}
-        />
+            <ServicioInformacion
+                client:visible
+                title="Reiki"
+                description=`La sanación de reiki puede tener lugar en varios niveles: físico, mental o emocional. Dependiendo de los síntomas, el reiki, por ejemplo, puede (en teoría) ayudar a combatir los dolores de cabeza, la depresión o los problemas de concentración`
+                image="masajes"
+                price="150"
+                duration="75 min"
+                btnText="Reservar"
+            />
 
-        <ServicioCardIndex
-            id={3}
-            title="Biomagnetismo"
-            image="masajes"
-            url="/"
-            btnText="Más Información"
-            services={[
-                "Masaje con piedras calientes",
-                "Masaje con Bambú",
-                "Masaje de medio cuerpo",
-            ]}
-        />
+            <ServicioInformacion
+                client:visible
+                title="Alineacion de Chakras"
+                description=`La alineación de chakras renueva tu energía y mejora tu vida. Beneficios: elimina bloqueos y malas energías, cierra fugas de energía, sana cuerpo y mente, alivia tristeza y rencores, mejora salud, prosperidad y amor, reduce estrés y pensamientos negativos, y aumenta la claridad mental y la autoconfianza`
+                image="masajes"
+                price="150"
+                duration="75 min"
+                btnText="Reservar"
+            />
 
-        <ServicioCardIndex
-            id={4}
-            title="Péndulo hebreo"
-            image="masajes"
-            url="/"
-            btnText="Más Información"
-            services={[
-                "Masaje con Bambú",
-                "Masaje de medio cuerpo",
-            ]}
-        />
+            <ServicioInformacion
+                client:visible
+                title="Péndulo Hebreo"
+                description=`La técnica de las letras hebreas transforma instantáneamente la energía en personas, lugares y objetos, eliminando anomalías energéticas y proporcionando energía pura y positiva. Consta de 18 tratamientos usando 236 etiquetas de Códigos Hebreos Sagrados para restaurar la energía a su estado original de luz. La capacitación incluye teoría y práctica`
+                image="masajes"
+                price="150"
+                duration="75 min"
+                btnText="Reservar"
+            />
 
-        <ServicioCardIndex
-            id={5}
-            title="Terapia floral"
-            image="masajes"
-            url="/"
-            btnText="Más Información"
-            services={[
-                "Masaje de medio cuerpo",
-            ]}
-        />
+            <ServicioInformacion
+                client:visible
+                title="Limpieza de Aura"
+                description=`La limpieza del aura alivia el cansancio, insomnio, irritabilidad, pesimismo, tristeza, estrés y más. Cada sesión incluye una esencia vibracional para proteger el campo áurico. Si el aura está sucia, puede causar enfermedades, depresión, problemas en relaciones y negocios. Utiliza aceites esenciales, cromoterapia, incienso, cristales y otros elementos`
+                image="masajes"
+                price="150"
+                duration="90 min"
+                btnText="Reservar"
+            />
+            <ServicioInformacion
+                client:visible
+                title="Geometría Sagrada"
+                description=`La Terapia de Geometría Sagrada utiliza patrones geométricos como la Flor de la Vida o los Sólidos Platónicos para restaurar el equilibrio energético. Durante las sesiones, el terapeuta canaliza estas geometrías para liberar bloqueos emocionales y mentales, promoviendo la paz y el equilibrio interior del individuo`
+                image="masajes"
+                price="150"
+                duration="75 min"
+                btnText="Reservar"
+            />
 
-        <ServicioCardIndex
-            id={6}
-            title="Reiki"
-            image="masajes"
-            url="/"
-            btnText="Más Información"
-            services={[
-            ]}
-        />
-    </div>
+            <ServicioInformacion
+                client:visible
+                title="Registros Akasjicos"
+                description=`Las lecturas psíquicas ofrecen beneficios emocionales y espirituales al revelar perspectivas externas sobre la vida, aclarar dudas, descubrir el origen de situaciones específicas y recordar la conexión entre lo terrenal y lo espiritual. Ayudan a sanar y a comprender las raíces energéticas de nuestras experiencias`
+                image="masajes"
+                price="150"
+                duration="-"
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Hipnosis Curativa"
+                description=`A través de estas sesiones, sanarás el origen emocional de experiencias pasadas, conectando con tu inconsciente para comprender bloqueos, cerrar ciclos, y sanar heridas emocionales, miedos, traumas, inseguridades y patrones inconscientes. Además, son efectivas para superar hábitos destructivos como el tabaquismo y el alcoholismo`
+                image="masajes"
+                price="200"
+                duration="90 min"
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Regresión Hipnótica "
+                description=`La regresión hipnótica busca retroceder a episodios anteriores de la vida, volverlos a contemplar, solucionarlos emocionalmente y volver al estado actual`
+                image="masajes"
+                price="200"
+                duration="90 min"
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Biomagnetismo"
+                description=`El biomagnetismo médico es una terapia alternativa que usa imanes para prevenir, diagnosticar y tratar enfermedades. Los imanes se aplican en zonas afectadas para combatir patógenos como parásitos, bacterias, hongos y virus. Se realiza un rastreo a través de los pies y los imanes se colocan durante 20 minutos en los puntos afectados`
+                image="masajes"
+                price="150"
+                duration="75 min"
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Reflexología Podal" 
+                description=`a reflexología elimina toxinas y equilibra el campo físico, energético, y sistemas nervioso, emocional, espiritual y mental. Cada órgano tiene un punto reflejo en el pie que puede ser estimulado. Técnica milenaria originaria de China, Egipto y tribus de EE.UU. Alivia estrés, ansiedad, fortalece el sistema inmunológico, activa la circulación y mejora el sueño`
+                image="masajes"
+                price="150"
+                duration="75 min"
+                btnText="Reservar"
+            />
+        </div>
+    </main>
 </Layout>

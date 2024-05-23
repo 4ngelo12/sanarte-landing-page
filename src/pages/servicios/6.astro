@@ -1,0 +1,52 @@
+---
+import { ServicioInformacion } from "@/components/ServicioInformacion";
+import ServiciosTitulo from "@/components/ServiciosTitulo.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Pestañas y Cejas">
+    <ServiciosTitulo
+        title="Pestañas y Cejas"
+        image="masajes"
+        description="En Sanarte tenemos terapias holísticas, que son un método alternativo a las terapias que conocemos, ya que aborda la gestión de las emociones y las alteraciones psicológicas de un modo distinto al tradicional"
+    />
+    <main class="centrar py-8">
+        <div class="flex flex-wrap gap-5 items-center justify-center mb-4">
+            <ServicioInformacion
+                client:visible
+                title="Laminado de Cejas"
+                description="El laminado de cejas es una alternativa inspirada en el lifting de pestañas, que proporciona un arco perfecto y fija las cejas durante 6 semanas. Ideal para cejas onduladas o rebeldes, eleva y ordena el vello, aumentando la densidad. Puede complementarse con tinte para un resultado aún más definido"
+                image="masajes"
+                duration="60 min"
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Lifting de Pestañas"
+                description="El lifting de pestañas realza su curvatura natural, ofreciendo una mirada expresiva y larga desde la raíz. Usando tu propio pelo, logramos resultados naturales, duraderos y seguros. Este procedimiento ahorra tiempo en el maquillaje, estiliza la forma del ojo y no daña tus pestañas naturales. Los cuidados incluyen evitar el maquillaje inicial, el contacto con cremas y jabones, y no mojar las pestañas para mantener el efecto"
+                image="masajes"
+                duration="60 min - 90 min"
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Botox regenerador Dermolash"
+                description="Aplicación de la crema regeneradora para recuperar e hidratar pestañas y cejas dañadas. aplicable para lifting de pestañas y laminado de cejas. Es recomendable 1 vez a la semana para mantener tus cejas y pestañas fuertes y sanas"
+                image="masajes"
+                duration="15 min"
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Tinte para pestañas o cejas Dermolash"
+                description="Es como un baño de color que sirve para aportar más volumen, además de intensificar la mirada y hacer el efecto de alargar las pestañas. Su duración es de tres a cuatro semanas: a medida que pasa el tiempo los resultados se van suavizando de forma natural. Es recomendable realizarlo cada dos meses para mantener el color y la intensidad"
+                image="masajes"
+                duration="60 min - 90 min"
+                btnText="Reservar"
+            />
+        </div>
+    </main>
+</Layout>

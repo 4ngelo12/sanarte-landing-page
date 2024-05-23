@@ -1,16 +1,21 @@
 import { useState } from "react";
 import { FormularioReserva } from "./form-overlay/FormularioReserva";
 
-export const ServicioInformacion = ({ title, image, description, price, duration, btnText }
-    : { title: string, image: string, description: string, price: string, duration: string, btnText: string }) => {
+interface ServicioInformacionProps {
+    title: string;
+    image: string;
+    description?: string;
+    price?: string;
+    duration?: string;
+    include?: string[];
+    cardMinHeight?: string; // Solo se envia si se quiere cambiar la altura del card en px, rem, etc.
+    btnText: string;
+}
+
+
+export const ServicioInformacion = ({ title, image, description, price, duration, include, cardMinHeight = "23rem",
+    btnText }: ServicioInformacionProps) => {
     const [isOpen, setIsOpen] = useState(false);
-
-    // const handleReservar = (title: string) => {
-    //     const URL =
-    //         `https://api.whatsapp.com/send?phone=51955329677&text=Hola,%20quiero%20más%20información%20acerca%20de%20${title}`;
-
-    //     window.open(URL, "_blank");
-    // }
 
     const toggleForm = () => {
         setIsOpen(!isOpen);
@@ -30,26 +35,51 @@ export const ServicioInformacion = ({ title, image, description, price, duration
             </picture>
 
             <section
-                className="servicio-contenedor text-center flex flex-col items-center justify-center rounded-b-md min-h-[23rem]"
+                className={`servicio-contenedor text-center flex flex-col items-center justify-center rounded-b-md 
+                min-h-[${cardMinHeight}]`}
             >
                 <div className="my-auto px-5">
                     <h4 className="font-bold text-xl mb-3">{title}</h4>
 
-                    <p className="text-[.965rem] ">
-                        {description}
-                    </p>
+                    {
+                        description &&
+                        <p className="text-[.965rem] ">
+                            {description}
+                        </p>
+                    }
                 </div>
 
-                <div className="flex gap-4 mb-4">
-                    <div className="flex gap-1">
-                        <h4 className="font-semibold">Precio: </h4>
-                        <p className="inline-block">S/ {price}</p>
+                {
+                    include &&
+                    <div className="flex flex-col gap-1 px-2.5 my-2">
+                        <h4 className="ms-3 text-start font-semibold">Incluye:</h4>
+                        <ul className="ms-7 text-start list-disc text-[.965rem]">
+                            {
+                                include.map((item) => (
+                                    <li>{item}</li>
+                                ))
+                            }
+                        </ul>
                     </div>
+                }
 
-                    <div className="flex gap-1">
-                        <h4 className="font-semibold">Duración:</h4>
-                        <p className="inline-block">{duration}</p>
-                    </div>
+                <div className="flex gap-4 px-2.5 mb-4">
+                    {
+                        price &&
+                        <div className="flex gap-1">
+                            <h4 className="font-semibold">Precio: </h4>
+                            <p className="inline-block">S/ {price}</p>
+                        </div>
+
+                    }
+                    {
+                        duration &&
+                        <div className="flex gap-1">
+                            <h4 className="font-semibold">Duración:</h4>
+                            <p className="inline-block">{duration}</p>
+                        </div>
+                    }
+
                 </div>
 
                 <button

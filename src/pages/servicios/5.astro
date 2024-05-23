@@ -1,0 +1,64 @@
+---
+import { ServicioInformacion } from "@/components/ServicioInformacion";
+import ServiciosTitulo from "@/components/ServiciosTitulo.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Rituales">
+    <ServiciosTitulo
+        title="Rituales"
+        image="masajes"
+        description="En Sanarte tenemos terapias holísticas, que son un método alternativo a las terapias que conocemos, ya que aborda la gestión de las emociones y las alteraciones psicológicas de un modo distinto al tradicional"
+    />
+    <main class="centrar py-8">
+        <div class="flex flex-wrap gap-5 items-center justify-center mb-4">
+            <ServicioInformacion
+                client:visible
+                title="Ritual Kotodama"
+                description="Nuestro ritual Kotodoma ofrece una experiencia de 5 sentidos: un masaje relajante, un Facial profundo adaptado al tipo de piel, y una limpieza de aura. Con técnicas sincronizadas, buscamos transmitir paz y conectar con la naturaleza y la limpieza interior. Aromaterapia y musicoterapia te acompañarán durante la sesión"
+                image="masajes"
+                price="80"
+                duration="30 min"
+                include={[
+                    "Facial profundo según tipo de piel en rostro cuello y escote",
+                    "Masaje Relajante",
+                    "Limpieza de Aura",
+                    "Aromaterapia",
+                ]}
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Ritual Chowa"
+                description="El ritual Chowa, que significa armonía, te ofrece paz interior. Incluye un facial hidratante para el rostro, cuello y escote, seguido de un masaje con pindas para relajación y exfoliación natural. Concluye con una limpieza de aura, todo acompañado de aromaterapia y musicoterapia para conectar con tu esencia"
+                image="masajes"
+                price="80"
+                duration="30 min"
+                include={[
+                    "Facial hidratante en cara cuello y escote",
+                    "Masaje con Pindas",
+                    "Limpieza de Aura",
+                    "Aromaterapia",
+                ]}
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Ritual Seijaku"
+                description="El ritual Seijaku, que significa calma en medio del caos, te ayuda a olvidar el estrés y recuperar el control. Incluye un facial hidratante, reflexología podal y un masaje con piedras calientes. Todo acompañado de aromaterapia y musicoterapia para una experiencia relajante y revitalizante"
+                image="masajes"
+                price="80"
+                duration="30 min"
+                include={[
+                    "Facial hidratante en cara cuello y escote",
+                    "Masaje con Piedras Calientes",
+                    "Limpieza de Aura",
+                    "Aromaterapia",
+                ]}
+                btnText="Reservar"
+            />
+        </div>
+    </main>
+</Layout>

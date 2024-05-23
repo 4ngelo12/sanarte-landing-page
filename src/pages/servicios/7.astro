@@ -1,0 +1,63 @@
+---
+import { ServicioInformacion } from "@/components/ServicioInformacion";
+import ServiciosTitulo from "@/components/ServiciosTitulo.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Depilación Láser Soprano">
+    <ServiciosTitulo
+        title="Depilación Láser Sopran"
+        image="masajes"
+        description="La depilación láser Soprano Titanium ofrece una solución avanzada y sin dolor, con tres longitudes de onda combinadas para mayor eficacia y seguridad en todos los tipos de piel. Ganadora del premio al mejor láser mundial, su tecnología 3D destruye los folículos pilosos progresivamente, garantizando resultados duraderos"
+        warning="Contraindicaciones:"
+        warningDescription="Incluyen embarazo, tatuajes y lunares grandes, heridas, insolaciones, pelo blanco o pelirrojo, ciertos medicamentos como antineoplásicos o isotretinoína, y tratamientos como quimioterapia. Si se usan despigmentantes o retinol en la zona a depilar, suspender 3 días antes y después de la sesión"
+    />
+    <main class="centrar py-8">
+        <div class="flex flex-wrap gap-5 items-center justify-center mb-4">
+            <ServicioInformacion
+                client:visible
+                title="Axilas"
+                image="masajes"
+                duration="1 min"
+                cardMinHeight="8rem"
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Ambos Brazos"
+                image="masajes"
+                duration="4 min"
+                cardMinHeight="8rem"
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Ambas Piernas"
+                image="masajes"
+                duration="15 min"
+                cardMinHeight="8rem"
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Bikini"
+                image="masajes"
+                duration="15 min"
+                cardMinHeight="8rem"
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Espalda Entera"
+                image="masajes"
+                duration="5 min"
+                cardMinHeight="8rem"
+                btnText="Reservar"
+            />
+        </div>
+    </main>
+</Layout>
