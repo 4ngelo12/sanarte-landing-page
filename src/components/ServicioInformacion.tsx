@@ -54,7 +54,7 @@ export const ServicioInformacion = ({ title, image, description, price, duration
                         <h4 className="ms-3 text-start font-semibold">Incluye:</h4>
                         <ul className="ms-7 text-start list-disc text-[.965rem]">
                             {
-                                include.map((index, item) => (
+                                include.map((item, index) => (
                                     <li key={index}>{item}</li>
                                 ))
                             }

@@ -3,12 +3,11 @@ interface Props {
     id: number;
     title: string;
     image: string;
-    description: string;
     url: string;
     btnText: string;
 }
 
-const { id, title, image, description, url, btnText } = Astro.props;
+const { id, title, image, url, btnText } = Astro.props;
 ---
 
 <div class="flex flex-col w-[16.563rem] rounded-md">
