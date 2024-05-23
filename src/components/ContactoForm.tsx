@@ -46,8 +46,8 @@ export function ContactoForm() {
                         />
 
                         {
-                            errors.apellido && (
-                                <span className="text-red-500 text-sm mt-1">{String(errors.apellido.message)}</span>
+                            errors.nombres && (
+                                <span className="text-red-500 text-sm mt-1">{String(errors.nombres.message)}</span>
                             )
                         }
                     </div>
@@ -80,6 +80,7 @@ export function ContactoForm() {
                         }
                     </div>
                 </div>
+
                 <div>
                     <label htmlFor="telefono" className="block text-sm font-semibold leading-6 text-gray-900">
                         Teléfono:
@@ -108,6 +109,7 @@ export function ContactoForm() {
                         }
                     </div>
                 </div>
+                
                 <div className="sm:col-span-2">
                     <label htmlFor="mensaje" className="block text-sm font-semibold leading-6 text-gray-900">
                         Cuentanos, ¿Cómo podriamos ayudarte?:

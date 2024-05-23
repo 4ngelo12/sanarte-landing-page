@@ -23,9 +23,7 @@ const { title } = Astro.props;
 	<body>
 		<Header />
 
-		<main class="centrar py-8">
-			<slot />
-		</main>
+		<slot />
 
 		<Footer />
 	</body>
@@ -58,6 +56,10 @@ const { title } = Astro.props;
 		margin: 0 auto;
 		width: min(90%, 75rem);
 	}
+
+	.servicio-contenedor {
+        background-color: #c1bb9d;
+    }
 
 	footer {
 		background-color: var(--footer-bg);

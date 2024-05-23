@@ -4,82 +4,51 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Nosotros">
-    <div class="flex flex-col-reverse md:flex-row-reverse gap-8 pb-1">
-        <picture class="md:w-[175rem]">
-            <source srcset=`img/img.webp` type="image/webp" />
-            <source srcset=`img/img.png` type="image/png" />
-            <img
-                loading="lazy"
-                src=`img/img.png`
-                alt=`img image`
-            />
-        </picture>
+    <main class="centrar py-8">
+        <div class="flex flex-col-reverse md:flex-row-reverse gap-8 pb-1">
+            <picture class="md:w-[175rem]">
+                <source srcset=`img/img.webp` type="image/webp" />
+                <source srcset=`img/img.png` type="image/png" />
+                <img loading="lazy" src=`img/img.png` alt=`img image` />
+            </picture>
 
-        <div class="flex flex-col justify-center gap-3">
-            <h1 class="text-2xl font-bold">Nuestra historia</h1>
+            <div class="flex flex-col justify-center gap-3">
+                <h1 class="text-2xl font-bold">Nuestra historia</h1>
 
-            <p>
-                Nuestra historia se remonta al año 2020 cuando la pandemia se
-                extendió en el Perú. En ese momento dimos inicio a SANARTE y
-                comenzamos a atender a nuestros clientes con nuestras terapias
-                holísticas. En el año 2023 abrimos nuestro primer local
-                innovando en el área estética y generando la fusión que hoy nos
-                caracteriza, redescubriendo así que el bienestar holístico y la
-                estética se entrelazan para nutrir el cuerpo, calmar la mente y
-                elevar el espíritu, creando una armonía interior y exterior que
-                refleja la belleza en su forma más completa.
-            </p>
+                <p>
+                    Nuestra historia se remonta al año 2020 cuando la pandemia
+                    se extendió en el Perú. En ese momento dimos inicio a
+                    SANARTE y comenzamos a atender a nuestros clientes con
+                    nuestras terapias holísticas. En el año 2023 abrimos nuestro
+                    primer local innovando en el área estética y generando la
+                    fusión que hoy nos caracteriza, redescubriendo así que el
+                    bienestar holístico y la estética se entrelazan para nutrir
+                    el cuerpo, calmar la mente y elevar el espíritu, creando una
+                    armonía interior y exterior que refleja la belleza en su
+                    forma más completa.
+                </p>
+            </div>
         </div>
-    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-8 py-8">
-        <NosotrosInfoItem
-            title="Visión"
-            description=`Ser la empresa líder en el mercado de la belleza y el bienestar
+        <div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-8 py-8">
+            <NosotrosInfoItem
+                title="Visión"
+                description=`Ser la empresa líder en el mercado de la belleza y el bienestar
         holístico, brindando un servicio de calidad y excelencia, con un
         equipo altamente capacitado y comprometido con el bienestar de
         nuestros clientes.`
-            className="text-center"
-        />
+                className="text-center"
+            />
 
-        <NosotrosInfoItem
-            title="Misión"
-            description=`Nuestra visión es ir más allá de ser simplemente un centro de 
+            <NosotrosInfoItem
+                title="Misión"
+                description=`Nuestra visión es ir más allá de ser simplemente un centro de 
         estética de primer nivel. Nos esforzamos por ser un referente en el cuidado 
         integral del cuerpo y la mente, ofreciendo una gama completa de servicios 
         que van desde tratamientos faciales y corporales de vanguardia hasta terapias 
         holísticas personalizadas que abordan las necesidades individuales de cada cliente.`
-            className="text-center md:col-start-2 md:row-start-2"
-        />
-    </div>
-
-    <!-- <div class="flex flex-col gap-4">
-        <h2 class="text-2xl font-bold">Nuestro equipo</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <NosotrosInfoItem
-                title="Nombre"
-                description=`Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Aliquam auctor, nunc nec ultricies.`
-                className="items-center"
-                image="img.png"
-            />
-
-            <NosotrosInfoItem
-                title="Nombre"
-                description=`Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Aliquam auctor, nunc nec ultricies.`
-                className="items-center"
-                image="img.png"
-            />
-
-            <NosotrosInfoItem
-                title="Nombre"
-                description=`Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Aliquam auctor, nunc nec ultricies.`
-                className="items-center"
-                image="img.png"
+                className="text-center md:col-start-2 md:row-start-2"
             />
         </div>
-    </div> -->
+    </main>
 </Layout>

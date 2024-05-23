@@ -1,86 +1,151 @@
 ---
-import ServicioCardIndex from "@/components/ServicioCardIndex.astro";
+import { ServicioInformacion } from "@/components/ServicioInformacion";
+import { FormularioReserva } from "@/components/form-overlay/FormularioReserva";
+import ServiciosTitulo from "@/components/ServiciosTitulo.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout title="Masajes">
-    <h2 class="text-center text-3xl font-semibold mb-5">Masajes</h2>
+    <ServiciosTitulo
+        title="Masajes"
+        image="masajes"
+        description=`Ofrecemos masajes personalizados utilizando diversas técnicas para
+        activar y regenerar el organismo, aliviar el dolor, mejorar la
+        circulación, reducir el estrés, aumentar la relajación y promover la
+        salud y el bienestar general.`
+        warning="Contraindicaciones:"
+        warningDescription=`Inflamaciones, enfermedades infecciosas o contagiosas,
+    cáncer, tumores, quistes, hematomas, úlceras avanzadas, varices
+    avanzadas, cicatrices recientes, fracturas, hemorragias internas,
+    fiebres, apendicitis.`
+    />
+    <main class="centrar py-8">
+        <div class="my-6 flex flex-wrap gap-5 items-center justify-center">
+            <ServicioInformacion
+                client:visible
+                title="Masaje Descontructurante"
+                description=`Este masaje descontracturante y relajante armoniza cuerpo y mente. Con técnicas específicas, aceites, y música, mejora la circulación sanguínea, elimina toxinas, y alivia migrañas. Ayuda a relajar y descontracturar zonas de tensión muscular, promoviendo la elasticidad y movilidad de los músculos, además de reforzar el sistema inmunológico`
+                image="masajes"
+                price="120"
+                duration="60 min"
+                btnText="Reservar"
+            />
 
-    <div class="flex flex-wrap gap-5 items-center justify-center">
-        <ServicioCardIndex
-            id={1}
-            title="Masaje Descontracturante"
-            image="masajes"
-            url="/masajes"
-            btnText="Más Información"
-            services={[
-                
-                "Masaje relajante",
-                "Masaje con pindas o ayurveda",
-                "Masaje con piedras calientes",
-                "Masaje con Bambú",
-                "Masaje de medio cuerpo",
-            ]}
-        />
+            <ServicioInformacion
+                client:visible
+                title="Masaje relajante"
+                description=`Este masaje relajante usa maniobras envolventes y música para liberar la mente de angustias, relajar los músculos, y mejorar la oxigenación del cuerpo. Disminuye niveles de estrés, combate la ansiedad y depresión, reduce la presión sanguínea, y mejora la circulación, promoviendo la recuperación y equilibrio del cuerpo`
+                image="masajes"
+                price="95"
+                duration="60 min"
+                btnText="Reservar"
+            />
 
-        <ServicioCardIndex
-            id={2}
-            title="Masaje relajante"
-            image="masajes"
-            url="/masajes"
-            btnText="Más Información"
-            services={[
-                "Masaje con pindas o ayurveda",
-                "Masaje con piedras calientes",
-                "Masaje con Bambú",
-                "Masaje de medio cuerpo",
-            ]}
-        />
+            <ServicioInformacion
+                client:visible
+                title="Masaje con Pindas"
+                description=`El Masaje con Pindas, originario de la India, combina calor, aceites y acupresión para una profunda relajación. Calentadas al vapor, las hierbas liberan propiedades curativas que se absorben durante el masaje. Beneficios: relajación muscular, exfoliación, activación de la circulación, alivio de dolores y estimulación del sistema nervioso`
+                image="masajes"
+                price="95"
+                duration="70 min"
+                btnText="Reservar"
+            />
 
-        <ServicioCardIndex
-            id={5}
-            title="Masaje con pindas o ayurveda"
-            image="masajes"
-            url="/masajes"
-            btnText="Más Información"
-            services={[
-                "Masaje con piedras calientes",
-                "Masaje con Bambú",
-                "Masaje de medio cuerpo",
-            ]}
-        />
+            <ServicioInformacion
+                client:visible
+                title="Masaje con piedras calientes"
+                description=`El masaje con piedras calientes y frías combina técnica tradicionales con 
+                aplicación de piedras a distintas temperaturas. Alivia trastornos físicos y emocionales, 
+                elimina toxinas, renueva niveles de energía y alivia el estrés, utilizando piedras volcánicas`
+                image="masajes"
+                price="120"
+                duration="70 min"
+                btnText="Reservar"
+            />
 
-        <ServicioCardIndex
-            id={4}
-            title="Masaje con piedras calientes"
-            image="masajes"
-            url="/masajes"
-            btnText="Más Información"
-            services={[
-                "Masaje con Bambú",
-                "Masaje de medio cuerpo",
-            ]}
-        />
+            <ServicioInformacion
+                client:visible
+                title="Masaje de medio cuerpo"
+                description=`Un masaje localizado de cabeza, cuello y espalda acompañado de compresas calientes 
+                y aromaterapia, nos enfocamos en su zona de dolor`
+                image="masajes"
+                price="60"
+                duration="40 min"
+                btnText="Reservar"
+            />
 
-        <ServicioCardIndex
-            id={5}
-            title="Masaje con Bambú"
-            image="masajes"
-            url="/masajes"
-            btnText="Más Información"
-            services={[
-                "Masaje de medio cuerpo",
-            ]}
-        />
+            <ServicioInformacion
+                client:visible
+                title="Masaje Podal – Reflexología"
+                description=`El masaje específico en zonas del pie libera tensiones acumuladas, 
+                promoviendo relajación física y mental, y reduciendo los niveles de cortisol, 
+                una hormona asociada al estrés`
+                image="masajes"
+                price="70"
+                duration="40 min"
+                btnText="Reservar"
+            />
 
-        <ServicioCardIndex
-            id={6}
-            title="Masaje de medio cuerpo"
-            image="masajes"
-            url="/masajes"
-            btnText="Más Información"
-            services={[
-            ]}
-        />
-    </div>
-</Layout>
+            <ServicioInformacion
+                client:visible
+                title="Electromassage - terapeutico"
+                description=`La sesión comienza con la colocación de tens en zonas de alta tensión para actuar 
+                como analgésico muscular. Posteriormente, se realiza un masaje de tejido profundo que 
+                ayuda a liberar nudos y contracturas`
+                image="masajes"
+                price="120"
+                duration="60 min"
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Masaje Prenatal"
+                description=`El masaje prenatal alivia molestias del embarazo y contribuye al bienestar de madre 
+                y bebé mediante la liberación de endorfinas. Es recomendado para su seguridad y comodidad, 
+                adaptándose a las necesidades cambiantes del cuerpo durante esta etapa. 
+                Los terapeutas certificados pueden diseñar un masaje específico y seguro`
+                image="masajes"
+                price="80"
+                duration="30 min"
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Masaje a Cuatro Manos"
+                description=`El masaje a cuatro manos activa circulación y linfa, eliminando toxinas,
+                proporcionando relajación muscular intensa y purificando el organismo. Recomendado para estrés, 
+                insomnio y ansiedad. Promueve bienestar absoluto, alivia dolores musculares, 
+                mejora funcionamiento de órganos y ofrece una experiencia sensorial única`
+                image="masajes"
+                price="120"
+                duration="60 min"
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Descarga Muscular"
+                description=`Previene de posibles lesiones en el deportista, 
+                optimiza al máximo el rendimiento muscular y acelera la recuperación post entrenamiento`
+                image="masajes"
+                price="120"
+                duration="60 min"
+                btnText="Reservar"
+            />
+
+            <ServicioInformacion
+                client:visible
+                title="Exfoliación Corporal Hidratación Corporal"
+                description=`Exfoliante corporal de texturas y aromas estacionales que permiten realizar 
+                maniobras de masajes que estimulan la microcirculación sanguínea, desintoxica, 
+                remineraliza y regenera la piel`
+                image="masajes"
+                price="120"
+                duration="60 min"
+                btnText="Reservar"
+            />
+        </div>
+    </main></Layout
+>

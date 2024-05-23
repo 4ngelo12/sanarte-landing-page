@@ -1,0 +1,21 @@
+---
+import { ServicioInformacion } from "@/components/ServicioInformacion";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Masaje con Piedras Calientes">
+    <ServicioInformacion
+        client:visible
+        title="Masaje con Piedras Calientes"
+        image="masajes"
+        description=`El masaje con piedras calientes es una técnica terapéutica que combina la aplicación de piedras lisas y calentadas con técnicas de masaje tradicional para proporcionar una experiencia profundamente relajante y terapéutica. Este tipo de masaje se basa en la utilización del calor de las piedras volcánicas, que ayuda a relajar los músculos tensos, mejorar la circulación y aliviar el estrés. Es ideal para quienes buscan una experiencia de masaje que ofrezca beneficios físicos y mentales, proporcionando una sensación de bienestar y rejuvenecimiento que dura mucho más allá de la sesión de masaje.`
+        price="120.00"
+        benefits={[
+            "Proporciona una relajación intensa al permitir que el calor penetre profundamente en los músculos",
+            "Ayuda a aliviar dolores musculares y articulares, especialmente en personas con tensiones crónicas",
+            "Estimula el flujo sanguíneo, lo que puede mejorar la oxigenación y nutrición de los tejidos",
+            "Induce una profunda sensación de calma y relajación, ayudando a reducir el estrés y la ansiedad",
+            "Alivia la rigidez muscular, mejorando la flexibilidad y movilidad del cuerpo",
+        ]}
+    />
+</Layout>

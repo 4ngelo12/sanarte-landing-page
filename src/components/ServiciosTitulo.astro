@@ -1,0 +1,51 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    warning: string;
+    warningDescription: string;
+    image: string;
+}
+
+const { title, description, warning, warningDescription, image }: Props =
+    Astro.props;
+---
+
+<section
+    class="flex flex-col md:flex-row gap-3 items-center justify-center mx-auto w-full p-8 princpal-bg"
+>
+    <img
+        src=`/img/${image}.webp`
+        alt="Masajes"
+        class="md:w-1/2 object-cover rounded-lg shadow-lg ms-8"
+    />
+
+    <div class="p-3 md:w-1/2">
+        <h2 class="text-4xl font-semibold mb-5">{title}</h2>
+
+        <p>
+            {description}
+        </p>
+
+        {
+            warning && (
+                <p>
+                    <span class="font-semibold">{warning} </span>
+                    {warningDescription}
+                </p>
+            )
+        }
+    </div>
+</section>
+
+<style lang="scss">
+    .princpal-bg {
+        background: rgb(208, 179, 124);
+        background: linear-gradient(
+            95deg,
+            rgba(208, 179, 124, 1) 0%,
+            rgba(203, 180, 135, 1) 55%,
+            rgba(255, 233, 192, 1) 100%
+        );
+    }
+</style>
